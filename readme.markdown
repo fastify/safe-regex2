@@ -11,6 +11,10 @@ expressions I could find scouring the internet, but I don't have enough of a
 background in automata to be absolutely sure that this module will catch all
 exponential-time cases.
 
+[![browser support](https://ci.testling.com/substack/safe-regex.png)](https://ci.testling.com/substack/safe-regex)
+
+[![build status](https://secure.travis-ci.org/substack/safe-regex.png)](http://travis-ci.org/substack/safe-regex)
+
 # example
 
 ``` js
