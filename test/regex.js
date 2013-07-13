@@ -1,0 +1,33 @@
+var safe = require('../');
+var test = require('tape');
+
+var good = [
+    /\bOakland\b/,
+    /\b(Oakland|San Francisco)\b/i,
+    /^\d+1337\d+$/i,
+    /^\d+(1337|404)\d+$/i,
+    /^\d+(1337|404)*\d+$/i,
+];
+
+test('safe regex', function (t) {
+    t.plan(good.length);
+    good.forEach(function (re) {
+        t.equal(safe(re), true);
+    });
+});
+    
+
+var bad = [
+    /^(a?){25}(a){25}$/,
+    /(x+x+)+y/,
+    /(a+){10}y/,
+    /(a+){2}y/,
+    /(.*){1,32000}[bc]/
+];
+
+test('unsafe regex', function (t) {
+    t.plan(good.length);
+    bad.forEach(function (re) {
+        t.equal(safe(re), false);
+    });
+});
