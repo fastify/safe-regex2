@@ -11,6 +11,12 @@ module.exports = function (re) {
             if (starHeight > 1) return false;
         }
         
+        if (node.options) {
+            for (var i = 0, len = node.options.length; i < len; i++) {
+                var ok = walk({ stack: node.options[i] }, starHeight);
+                if (!ok) return false;
+            }
+        }
         var stack = node.stack || (node.value && node.value.stack);
         if (!stack) return true;
         
