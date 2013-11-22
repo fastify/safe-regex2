@@ -20,13 +20,14 @@ test('safe regex', function (t) {
 var bad = [
     /^(a?){25}(a){25}$/,
     /(x+x+)+y/,
+    /foo|(x+x+)+y/,
     /(a+){10}y/,
     /(a+){2}y/,
     /(.*){1,32000}[bc]/
 ];
 
 test('unsafe regex', function (t) {
-    t.plan(good.length);
+    t.plan(bad.length);
     bad.forEach(function (re) {
         t.equal(safe(re), false);
     });
