@@ -1,13 +1,13 @@
 {
   "name": "safe-regex",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "detect possibly catastrophic, exponential-time regular expressions",
   "main": "index.js",
   "dependencies": {
-    "ret": "~0.1.6"
+    "ret": "~0.1.10"
   },
   "devDependencies": {
-    "tape": "~1.0.4"
+    "tape": "^3.5.0"
   },
   "scripts": {
     "test": "tape test/*.js"
