@@ -47,6 +47,8 @@ catastrophic.
 
 `re` can be a `RegExp` object or just a string.
 
+If the `re` is a string and is an invalid regex, returns `false`.
+
 # install
 
 With [npm](https://npmjs.org) do:
