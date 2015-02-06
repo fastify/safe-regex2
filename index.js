@@ -4,19 +4,16 @@ var types = parse.types;
 module.exports = function (re) {
     if (isRegExp(re)) re = re.source;
     else if (typeof re !== 'string') re = String(re);
-
-    try {
-      re = parse(re);
-    } catch (err) {
-      return false;
-    }
-
+    
+    try { re = parse(re) }
+    catch (err) { return false }
+    
     return (function walk (node, starHeight) {
         if (node.type === types.REPETITION) {
             starHeight ++;
             if (starHeight > 1) return false;
         }
-
+        
         if (node.options) {
             for (var i = 0, len = node.options.length; i < len; i++) {
                 var ok = walk({ stack: node.options[i] }, starHeight);
@@ -25,12 +22,12 @@ module.exports = function (re) {
         }
         var stack = node.stack || (node.value && node.value.stack);
         if (!stack) return true;
-
+        
         for (var i = 0; i < stack.length; i++) {
             var ok = walk(stack[i], starHeight);
             if (!ok) return false;
         }
-
+        
         return true;
     })(re, 0);
 };
