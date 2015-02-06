@@ -15,7 +15,7 @@ test('safe regex', function (t) {
         t.equal(safe(re), true);
     });
 });
-    
+
 
 var bad = [
     /^(a?){25}(a){25}$/,
@@ -31,4 +31,18 @@ test('unsafe regex', function (t) {
     bad.forEach(function (re) {
         t.equal(safe(re), false);
     });
+});
+
+var invalid = [
+  '*Oakland*',
+  'hey(yoo))',
+  'abcde(?>hellow)',
+  '[abc'
+];
+
+test('invalid regex', function (t) {
+  t.plan(invalid.length);
+  invalid.forEach(function (re) {
+    t.equal(safe(re), false);
+  });
 });
