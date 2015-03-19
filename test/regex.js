@@ -19,6 +19,7 @@ test('safe regex', function (t) {
 
 var bad = [
     /^(a?){25}(a){25}$/,
+    RegExp(Array(31).join('a?') + Array(31).join('a')),
     /(x+x+)+y/,
     /foo|(x+x+)+y/,
     /(a+){10}y/,
