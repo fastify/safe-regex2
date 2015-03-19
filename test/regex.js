@@ -36,15 +36,15 @@ test('unsafe regex', function (t) {
 });
 
 var invalid = [
-  '*Oakland*',
-  'hey(yoo))',
-  'abcde(?>hellow)',
-  '[abc'
+    '*Oakland*',
+    'hey(yoo))',
+    'abcde(?>hellow)',
+    '[abc'
 ];
 
 test('invalid regex', function (t) {
-  t.plan(invalid.length);
-  invalid.forEach(function (re) {
-    t.equal(safe(re), false);
-  });
+    t.plan(invalid.length);
+    invalid.forEach(function (re) {
+        t.equal(safe(re), false);
+    });
 });
