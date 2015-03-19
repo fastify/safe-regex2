@@ -7,6 +7,7 @@ var good = [
     /^\d+1337\d+$/i,
     /^\d+(1337|404)\d+$/i,
     /^\d+(1337|404)*\d+$/i,
+    RegExp(Array(26).join('a?') + Array(26).join('a')),
 ];
 
 test('safe regex', function (t) {
@@ -19,7 +20,7 @@ test('safe regex', function (t) {
 
 var bad = [
     /^(a?){25}(a){25}$/,
-    RegExp(Array(31).join('a?') + Array(31).join('a')),
+    RegExp(Array(27).join('a?') + Array(27).join('a')),
     /(x+x+)+y/,
     /foo|(x+x+)+y/,
     /(a+){10}y/,
