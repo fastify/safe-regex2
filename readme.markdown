@@ -40,7 +40,7 @@ true
 var safe = require('safe-regex')
 ```
 
-## var ok = safe(re)
+## var ok = safe(re, opts={})
 
 Return a boolean `ok` whether or not the regex `re` is safe and not possibly
 catastrophic.
@@ -48,6 +48,9 @@ catastrophic.
 `re` can be a `RegExp` object or just a string.
 
 If the `re` is a string and is an invalid regex, returns `false`.
+
+* `opts.limit` - maximum number of allowed repetitions in the entire regex.
+Default: `25`.
 
 # install
 
