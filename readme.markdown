@@ -1,6 +1,6 @@
 # safe-regex2
 
-[![Build Status](https://travis-ci.com/fastify/safe-regex.svg?branch=master)](https://travis-ci.com/fastify/safe-regex)
+[![Build Status](https://travis-ci.com/fastify/safe-regex.svg?branch=master)](https://travis-ci.com/fastify/safe-regex) [![Greenkeeper badge](https://badges.greenkeeper.io/fastify/safe-regex2.svg)](https://greenkeeper.io/)
 
 detect potentially
 [catastrophic](http://regular-expressions.mobi/catastrophic.html)
