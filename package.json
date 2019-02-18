@@ -4,23 +4,14 @@
   "description": "detect possibly catastrophic, exponential-time regular expressions",
   "main": "index.js",
   "dependencies": {
-    "ret": "~0.1.10"
+    "ret": "~0.2.0"
   },
   "devDependencies": {
-    "tape": "^3.5.0"
+    "standard": "^12.0.1",
+    "tape": "^4.0.0"
   },
   "scripts": {
-    "test": "tape test/*.js"
-  },
-  "testling": {
-    "files": "test/*.js",
-    "browsers": [
-      "ie/8", "ie/9", "ie/10", 
-      "firefox/latest",
-      "chrome/latest",
-      "opera/latest",
-      "safari/latest"
-    ]
+    "test": "standard && tape test/*.js"
   },
   "repository": {
     "type": "git",
