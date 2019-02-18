@@ -1,4 +1,4 @@
-# safe-regex
+# safe-regex2
 
 [![Build Status](https://travis-ci.com/fastify/safe-regex.svg?branch=master)](https://travis-ci.com/fastify/safe-regex)
 
@@ -8,13 +8,15 @@ detect potentially
 regular expressions by limiting the
 [star height](https://en.wikipedia.org/wiki/Star_height) to 1
 
+This is a fork of https://github.com/substack/safe-regex at 1.1.0.
+
 WARNING: This module has both false positives and false negatives.
 It is not meant as a full checker, but it detect basic cases.
 
 # example
 
 ``` js
-var safe = require('safe-regex');
+var safe = require('safe-regex2');
 var regex = process.argv.slice(2).join(' ');
 console.log(safe(regex));
 ```
@@ -53,7 +55,7 @@ Default: `25`.
 With [npm](https://npmjs.org) do:
 
 ```
-npm install safe-regex
+npm install safe-regex2
 ```
 
 # license
