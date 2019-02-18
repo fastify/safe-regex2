@@ -1,19 +1,15 @@
 # safe-regex
 
+[![Build Status](https://travis-ci.com/fastify/safe-regex.svg?branch=master)](https://travis-ci.com/fastify/safe-regex)
+
 detect potentially
 [catastrophic](http://regular-expressions.mobi/catastrophic.html)
 [exponential-time](http://perlgeek.de/blog-en/perl-tips/in-search-of-an-exponetial-regexp.html)
 regular expressions by limiting the
 [star height](https://en.wikipedia.org/wiki/Star_height) to 1
 
-WARNING: This module merely *seems* to work given all the catastrophic regular
-expressions I could find scouring the internet, but I don't have enough of a
-background in automata to be absolutely sure that this module will catch all
-exponential-time cases.
-
-[![browser support](https://ci.testling.com/substack/safe-regex.png)](https://ci.testling.com/substack/safe-regex)
-
-[![build status](https://secure.travis-ci.org/substack/safe-regex.png)](http://travis-ci.org/substack/safe-regex)
+WARNING: This module has both false positives and false negatives.
+It is not meant as a full checker, but it detect basic cases.
 
 # example
 
