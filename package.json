@@ -4,7 +4,7 @@
   "description": "detect possibly catastrophic, exponential-time regular expressions",
   "main": "index.js",
   "dependencies": {
-    "ret": "~0.2.0"
+    "ret": "~0.3.0"
   },
   "devDependencies": {
     "standard": "^12.0.1",
