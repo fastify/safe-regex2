@@ -1,22 +1,22 @@
 'use strict'
 
-var parse = require('ret')
-var types = parse.types
+const parse = require('ret')
+const types = parse.types
 
 module.exports = function (re, opts) {
   if (!opts) opts = {}
-  var replimit = opts.limit === undefined ? 25 : opts.limit
+  const replimit = opts.limit === undefined ? 25 : opts.limit
 
   if (isRegExp(re)) re = re.source
   else if (typeof re !== 'string') re = String(re)
 
   try { re = parse(re) } catch (err) { return false }
 
-  var reps = 0
+  let reps = 0
   return (function walk (node, starHeight) {
-    var i
-    var ok
-    var len
+    let i
+    let ok
+    let len
 
     if (node.type === types.REPETITION) {
       starHeight++
@@ -31,7 +31,7 @@ module.exports = function (re, opts) {
         if (!ok) return false
       }
     }
-    var stack = node.stack || (node.value && node.value.stack)
+    const stack = node.stack || (node.value && node.value.stack)
     if (!stack) return true
 
     for (i = 0; i < stack.length; i++) {

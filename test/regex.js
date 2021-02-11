@@ -1,7 +1,7 @@
-var safe = require('../')
-var test = require('tape')
+const safe = require('../')
+const test = require('tape')
 
-var good = [
+const good = [
   /\bOakland\b/,
   /\b(Oakland|San Francisco)\b/i,
   /^\d+1337\d+$/i,
@@ -17,7 +17,7 @@ test('safe regex', function (t) {
   })
 })
 
-var bad = [
+const bad = [
   /^(a?){25}(a){25}$/,
   RegExp(Array(27).join('a?') + Array(27).join('a')),
   /(x+x+)+y/,
@@ -34,7 +34,7 @@ test('unsafe regex', function (t) {
   })
 })
 
-var invalid = [
+const invalid = [
   '*Oakland*',
   'hey(yoo))',
   'abcde(?>hellow)',
