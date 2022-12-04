@@ -3,7 +3,7 @@
 const parse = require('ret')
 const types = parse.types
 
-module.exports = function (re, opts) {
+function safeRegex (re, opts) {
   if (!opts) opts = {}
   const replimit = opts.limit === undefined ? 25 : opts.limit
 
@@ -46,3 +46,7 @@ module.exports = function (re, opts) {
 function isRegExp (x) {
   return {}.toString.call(x) === '[object RegExp]'
 }
+
+module.exports = safeRegex
+module.exports.default = safeRegex
+module.exports.safeRegex = safeRegex
