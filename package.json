@@ -3,15 +3,20 @@
   "version": "3.0.0",
   "description": "detect possibly catastrophic, exponential-time regular expressions",
   "main": "index.js",
+  "types": "types/index.d.ts",
   "dependencies": {
     "ret": "~0.4.0"
   },
   "devDependencies": {
     "standard": "^17.0.0",
-    "tape": "^5.0.0"
+    "tape": "^5.0.0",
+    "tsd": "^0.25.0"
   },
   "scripts": {
-    "test": "standard && tape test/*.js"
+    "lint": "standard",
+    "test": "npm run test:unit",
+    "test:typescript": "tsd",
+    "test:unit": "tape test/*.js"
   },
   "repository": {
     "type": "git",
