@@ -1,3 +1,5 @@
+'use strict'
+
 const safe = require('../')
 const test = require('tape')
 
