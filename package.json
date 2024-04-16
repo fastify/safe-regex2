@@ -9,15 +9,15 @@
     "ret": "~0.5.0"
   },
   "devDependencies": {
-    "standard": "^17.0.0",
-    "tape": "^5.0.0",
+    "standard": "^17.1.0",
+    "tap": "^18.7.2",
     "tsd": "^0.31.0"
   },
   "scripts": {
     "lint": "standard",
     "test": "npm run test:unit",
     "test:typescript": "tsd",
-    "test:unit": "tape test/*.js"
+    "test:unit": "tap"
   },
   "repository": {
     "type": "git",

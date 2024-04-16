@@ -1,7 +1,7 @@
 'use strict'
 
 const safe = require('../')
-const test = require('tape')
+const { test } = require('tap')
 
 const good = [
   /\bOakland\b/,
