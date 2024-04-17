@@ -11,14 +11,14 @@
   "devDependencies": {
     "@fastify/pre-commit": "^2.1.0",
     "standard": "^17.1.0",
-    "tap": "^18.7.2",
+    "tape": "^5.7.5",
     "tsd": "^0.31.0"
   },
   "scripts": {
     "lint": "standard",
     "test": "npm run test:unit && npm run test:typescript",
     "test:typescript": "tsd",
-    "test:unit": "tap"
+    "test:unit": "tape test/*.js"
   },
   "repository": {
     "type": "git",

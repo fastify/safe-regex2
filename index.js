@@ -5,7 +5,7 @@ const types = parse.types
 
 function safeRegex (re, opts) {
   if (!opts) opts = {}
-  const replimit = opts.limit ?? 25
+  const replimit = opts.limit === undefined ? 25 : opts.limit
 
   /* c8 ignore next 2 */
   if (isRegExp(re)) re = re.source
