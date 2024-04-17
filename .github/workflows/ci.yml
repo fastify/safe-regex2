@@ -109,7 +109,7 @@ jobs:
     if: >
       github.event_name == 'pull_request' &&
       github.event.pull_request.user.login == 'dependabot[bot]'
-    needs: [browsers, lint, test, typescript]
+    needs: [lint, test, typescript]
     permissions:
       pull-requests: write
       contents: write
