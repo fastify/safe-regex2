@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@fastify/pre-commit": "^2.1.0",
-    "c8": "^7.14.0",
+    "c8": "^9.1.0",
     "standard": "^17.1.0",
     "tape": "^5.7.5",
     "tsd": "^0.31.0"
