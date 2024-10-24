@@ -14,8 +14,8 @@ It is not meant as a full checker, but it detect basic cases.
 # example
 
 ``` js
-var safe = require('safe-regex2');
-var regex = process.argv.slice(2).join(' ');
+const safe = require('safe-regex2');
+const regex = process.argv.slice(2).join(' ');
 console.log(safe(regex));
 ```
 
@@ -33,10 +33,10 @@ true
 # methods
 
 ``` js
-var safe = require('safe-regex')
+const safe = require('safe-regex')
 ```
 
-## var ok = safe(re, opts={})
+## const ok = safe(re, opts={})
 
 Return a boolean `ok` whether or not the regex `re` is safe and not possibly
 catastrophic.
