@@ -23,9 +23,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/fastify/safe-regex.git"
+    "url": "git://github.com/fastify/safe-regex2.git"
   },
-  "homepage": "https://github.com/fastify/safe-regex",
+  "bugs": {
+    "url": "https://github.com/fastify/safe-regex2/issues"
+  },
+  "homepage": "https://github.com/fastify/safe-regex2",
   "keywords": [
     "catastrophic",
     "exponential",
