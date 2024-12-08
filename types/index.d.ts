@@ -5,5 +5,5 @@ declare namespace safeRegex {
   export { safeRegex as default }
 }
 
-declare function safeRegex(...params: Parameters<SafeRegex2>): ReturnType<SafeRegex2>
+declare function safeRegex (...params: Parameters<SafeRegex2>): ReturnType<SafeRegex2>
 export = safeRegex

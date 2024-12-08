@@ -11,12 +11,13 @@
   "devDependencies": {
     "@fastify/pre-commit": "^2.1.0",
     "c8": "^7.14.0",
-    "standard": "^17.1.0",
+    "neostandard": "^0.11.9",
     "tape": "^5.7.5",
     "tsd": "^0.31.0"
   },
   "scripts": {
-    "lint": "standard",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "test": "npm run test:unit && npm run test:typescript",
     "test:typescript": "tsd",
     "test:unit": "c8 tape test/*.js"
