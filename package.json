@@ -31,6 +31,16 @@
     "url": "https://github.com/fastify/safe-regex2/issues"
   },
   "homepage": "https://github.com/fastify/safe-regex2",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/fastify"
+    },
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/fastify"
+    }
+  ],
   "keywords": [
     "catastrophic",
     "exponential",
@@ -44,7 +54,24 @@
     "url": "http://substack.net"
   },
   "contributors": [
-    "Matteo Collina <hello@matteocollina.com>"
+    {
+      "name": "Matteo Collina",
+      "email": "hello@matteocollina.com"
+    },
+    {
+      "name": "Gürgün Dayıoğlu",
+      "email": "hey@gurgun.day",
+      "url": "https://heyhey.to/G"
+    },
+    {
+      "name": "James Sumners",
+      "url": "https://james.sumners.info"
+    },
+    {
+      "name": "Frazer Smith",
+      "email": "frazer.dev@icloud.com",
+      "url": "https://github.com/fdawgs"
+    }
   ],
   "license": "MIT"
 }
