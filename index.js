@@ -33,7 +33,7 @@ function safeRegex (re, opts) {
         if (!ok) return false
       }
     }
-    const stack = node.stack || (node.value && node.value.stack)
+    const stack = node.stack || node.value?.stack
     if (!stack) return true
 
     for (i = 0; i < stack.length; i++) {
