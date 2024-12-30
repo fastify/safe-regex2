@@ -12,7 +12,7 @@ function safeRegex (re, opts) {
   if (isRegExp(re)) re = re.source
   else if (typeof re !== 'string') re = String(re)
 
-  try { re = parse(re) } catch (err) { return false }
+  try { re = parse(re) } catch { return false }
 
   let reps = 0
   return (function walk (node, starHeight) {
