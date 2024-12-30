@@ -1,6 +1,6 @@
 {
   "name": "safe-regex2",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "detect possibly catastrophic, exponential-time regular expressions",
   "main": "index.js",
   "type": "commonjs",
