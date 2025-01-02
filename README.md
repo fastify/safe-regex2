@@ -4,16 +4,13 @@
 [![NPM version](https://img.shields.io/npm/v/safe-regex2.svg?style=flat)](https://www.npmjs.com/package/safe-regex2)
 [![neostandard javascript style](https://img.shields.io/badge/code_style-neostandard-brightgreen?style=flat)](https://github.com/neostandard/neostandard)
 
-Detect potentially
-[catastrophic](http://regular-expressions.mobi/catastrophic.html)
-[exponential-time](http://perlgeek.de/blog-en/perl-tips/in-search-of-an-exponetial-regexp.html)
-regular expressions by limiting the
-[star height](https://en.wikipedia.org/wiki/Star_height) to 1.
+Detect potentially [catastrophic](http://regular-expressions.mobi/catastrophic.html) [exponential-time](http://perlgeek.de/blog-en/perl-tips/in-search-of-an-exponetial-regexp.html)
+regular expressions by limiting the [star height](https://en.wikipedia.org/wiki/Star_height) to 1.
 
 This is a fork of https://github.com/substack/safe-regex at 1.1.0.
 
 WARNING: This module has both false positives and false negatives.
-It is not meant as a full checker, but it detect basic cases.
+It is not meant as a full checker, but it detects basic cases.
 
 ## Install
 ```
@@ -47,12 +44,12 @@ const safe = require('safe-regex')
 
 ### const ok = safe(re, opts={})
 
-Return a boolean `ok` whether or not the regex `re` is safe and not possibly
-catastrophic.
+Returns a boolean indicating whether the regex `re` is safe
+and not possibly catastrophic.
 
 `re` can be a `RegExp` object or just a string.
 
-If the `re` is a string and is an invalid regex, returns `false`.
+If `re` is a string and is an invalid regex, it returns `false`.
 
 * `opts.limit` - maximum number of allowed repetitions in the entire regex.
 Default: `25`.
