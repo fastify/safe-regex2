@@ -1,6 +1,6 @@
 # safe-regex2
 
-[![CI](https://github.com/fastify/safe-regex2/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/fastify/safe-regex2/actions/workflows/ci.yml)
+[![CI](https://github.com/fastify/safe-regex2/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/fastify/safe-regex2/actions/workflows/ci.yml)
 [![NPM version](https://img.shields.io/npm/v/safe-regex2.svg?style=flat)](https://www.npmjs.com/package/safe-regex2)
 [![neostandard javascript style](https://img.shields.io/badge/code_style-neostandard-brightgreen?style=flat)](https://github.com/neostandard/neostandard)
 
