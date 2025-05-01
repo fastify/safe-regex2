@@ -14,7 +14,7 @@
     "eslint": "^9.17.0",
     "neostandard": "^0.12.0",
     "tape": "^5.7.5",
-    "tsd": "^0.31.0"
+    "tsd": "^0.32.0"
   },
   "scripts": {
     "lint": "eslint",
