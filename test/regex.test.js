@@ -1,7 +1,7 @@
 'use strict'
 
 const safe = require('../')
-const test = require('tape')
+const { test } = require('node:test')
 
 const good = [
   /\bOakland\b/,
@@ -12,10 +12,10 @@ const good = [
   RegExp(Array(26).join('a?') + Array(26).join('a'))
 ]
 
-test('safe regex', function (t) {
+test('safe regex', t => {
   t.plan(good.length)
   good.forEach(function (re) {
-    t.equal(safe(re), true)
+    t.assert.strictEqual(safe(re), true)
   })
 })
 
@@ -29,10 +29,10 @@ const bad = [
   /(.*){1,32000}[bc]/
 ]
 
-test('unsafe regex', function (t) {
+test('unsafe regex', t => {
   t.plan(bad.length)
   bad.forEach(function (re) {
-    t.equal(safe(re), false)
+    t.assert.strictEqual(safe(re), false)
   })
 })
 
@@ -43,9 +43,9 @@ const invalid = [
   '[abc'
 ]
 
-test('invalid regex', function (t) {
+test('invalid regex', t => {
   t.plan(invalid.length)
   invalid.forEach(function (re) {
-    t.equal(safe(re), false)
+    t.assert.strictEqual(safe(re), false)
   })
 })

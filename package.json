@@ -13,7 +13,6 @@
     "c8": "^10.1.3",
     "eslint": "^9.17.0",
     "neostandard": "^0.12.0",
-    "tape": "^5.7.5",
     "tsd": "^0.32.0"
   },
   "scripts": {
@@ -21,7 +20,7 @@
     "lint:fix": "eslint --fix",
     "test": "npm run test:unit && npm run test:typescript",
     "test:typescript": "tsd",
-    "test:unit": "c8 tape test/*.js"
+    "test:unit": "c8 --100 node --test"
   },
   "repository": {
     "type": "git",
