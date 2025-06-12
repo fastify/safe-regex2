@@ -5,6 +5,9 @@
   "main": "index.js",
   "type": "commonjs",
   "types": "types/index.d.ts",
+  "bin": {
+    "safe-regex2": "bin/safe-regex2.js"
+  },
   "dependencies": {
     "ret": "~0.5.0"
   },

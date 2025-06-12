@@ -3,6 +3,12 @@
 const parse = require('ret')
 const types = parse.types
 
+/**
+ * @param {string|RegExp} re - The regular expression to check, can be a string or RegExp object
+ * @param {object} [opts]
+ * @param {number} [opts.limit=25] - The maximum number of repetitions allowed
+ * @returns {boolean}
+ */
 function safeRegex (re, opts) {
   if (!opts) opts = {}
   /* c8 ignore next */
@@ -46,7 +52,7 @@ function safeRegex (re, opts) {
 }
 
 function isRegExp (x) {
-  return {}.toString.call(x) === '[object RegExp]'
+  return Object.prototype.toString.call(x) === '[object RegExp]'
 }
 
 module.exports = safeRegex
