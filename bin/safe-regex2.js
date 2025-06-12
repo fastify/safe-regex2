@@ -1,14 +1,10 @@
 #!/usr/bin/env node
 'use strict'
 
-const { resolve } = require('node:path')
-const { readFileSync } = require('node:fs')
 const { parseArgs } = require('node:util')
 const { safeRegex } = require('../index.js')
 
-const { version } = JSON.parse(
-  readFileSync(resolve(__dirname, '..', 'package.json'), 'utf8')
-)
+const { version } = require('../package.json')
 
 const { values: options, positionals } = parseArgs({
   allowPositionals: true,
