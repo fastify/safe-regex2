@@ -27,14 +27,14 @@ const { values: options, positionals } = parseArgs({
 })
 
 function help () {
-  console.log(`Usage: safe-regex2 [options] [<regex>]
+  console.log(`Usage: safe-regex2 [options] <regex>
 
 Check if a regular expression is safe to use in a production environment.
 
 Options:
   -v, --version          Display the version number
   -h, --help             Display this help message
-  <regex>                The regular expression to check (default: stdin)`
+  <regex>                The regular expression to check`
   )
 }
 
