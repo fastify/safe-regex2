@@ -15,7 +15,7 @@ const good = [
 test('safe regex', t => {
   t.plan(good.length)
   good.forEach(function (re) {
-    t.assert.strictEqual(safe(re), true)
+    t.assert.strictEqual(safe(re), true, `Expected ${re} to be safe`)
   })
 })
 
@@ -36,11 +36,17 @@ test('unsafe regex', t => {
   })
 })
 
+test('limit option', t => {
+  t.assert.strictEqual(safe(RegExp(Array(27).join('a?') + Array(27).join('a')), { limit: 50 }), true, 'Should be safe with limit of 50')
+  t.assert.strictEqual(safe(RegExp(Array(27).join('a?') + Array(27).join('a')), { limit: 24 }), false, 'Should be unsafe with limit of 24')
+})
+
 const invalid = [
   '*Oakland*',
   'hey(yoo))',
   'abcde(?>hellow)',
-  '[abc'
+  '[abc',
+  { toString: () => '[abc' }
 ]
 
 test('invalid regex', t => {
