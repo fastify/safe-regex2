@@ -56,9 +56,7 @@ function safeRegex (re, options) {
   else if (typeof re !== 'string') re = String(re)
 
   try {
-    const rootElement = parse(re)
-
-    return walk(rootElement, opts)
+    return walk(parse(re), opts)
   } catch {
     return false
   }
