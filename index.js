@@ -8,10 +8,10 @@ const { types } = require('ret')
  * @param {object} opts
  * @param {number} opts.reps - The number of repetitions encountered
  * @param {number} opts.limit - The maximum number of repetitions allowed
- * @param {number} [starHeight=0] - The current height of the star in the regex tree
+ * @param {number} starHeight - The current height of the star in the regex tree
  * @returns {boolean}
  */
-const walk = (node, opts, starHeight = 0) => {
+const walk = (node, opts, starHeight) => {
   let i
   let ok
   let len
@@ -56,7 +56,7 @@ function safeRegex (re, options) {
   else if (typeof re !== 'string') re = String(re)
 
   try {
-    return walk(parse(re), opts)
+    return walk(parse(re), opts, 0)
   } catch {
     return false
   }
