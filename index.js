@@ -11,7 +11,7 @@ const { types } = require('ret')
  * @param {number} starHeight - The current height of the star in the regex tree
  * @returns {boolean}
  */
-const walk = (node, opts, starHeight) => {
+function walk (node, opts, starHeight) {
   let i
   let ok
   let len
