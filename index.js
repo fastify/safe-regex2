@@ -67,7 +67,7 @@ function safeRegex (re, options) {
  * @returns {x is RegExp}
  */
 function isRegExp (x) {
-  return {}.toString.call(x) === '[object RegExp]'
+  return Object.prototype.toString.call(x) === '[object RegExp]'
 }
 
 module.exports = safeRegex
