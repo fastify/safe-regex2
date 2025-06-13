@@ -13,8 +13,17 @@ WARNING: This module has both false positives and false negatives.
 It is not meant as a full checker, but it detects basic cases.
 
 ## Install
-```
+```sh
 npm i safe-regex2
+```
+
+## Usage via npx
+
+You can use this module via `npx` without installing it globally:
+
+Example:
+```sh
+npx safe-regex2 '(x+x+)+y'
 ```
 
 ## Example
