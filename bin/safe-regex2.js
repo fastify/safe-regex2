@@ -50,12 +50,9 @@ if (options.help) {
     if (isSafe === false) {
       console.error('Provided regex is invalid or unsafe.')
       process.exit(1)
-    } else if (isSafe === true) {
+    } else {
       console.log('Provided regex is safe.')
       process.exit(0)
-    } else {
-      console.error('An unexpected error occurred while checking the regex.')
-      process.exit(1)
     }
   }
 }
