@@ -23,9 +23,10 @@ function walk (node, opts, starHeight) {
     if (opts.reps > opts.limit) return false
   }
 
-  if (node.options) {
-    for (i = 0, len = node.options.length; i < len; i++) {
-      ok = walk({ stack: node.options[i] }, opts, starHeight)
+  const options = node.options || node.value?.options
+  if (options) {
+    for (i = 0, len = options.length; i < len; i++) {
+      ok = walk({ stack: options[i] }, opts, starHeight)
       if (!ok) return false
     }
   }
