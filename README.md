@@ -4,7 +4,7 @@
 [![NPM version](https://img.shields.io/npm/v/safe-regex2.svg?style=flat)](https://www.npmjs.com/package/safe-regex2)
 [![neostandard javascript style](https://img.shields.io/badge/code_style-neostandard-brightgreen?style=flat)](https://github.com/neostandard/neostandard)
 
-Detect potentially [catastrophic](https://regular-expressions.mobi/catastrophic.html) [exponential-time](https://perlgeek.de/blog-en/perl-tips/in-search-of-an-exponetial-regexp.html)
+Detect potentially [catastrophic](https://www.regular-expressions.info/catastrophic.html) [exponential-time](https://perlgeek.de/blog-en/perl-tips/in-search-of-an-exponetial-regexp.html)
 regular expressions by limiting the [star height](https://en.wikipedia.org/wiki/Star_height) to 1.
 
 This is a fork of https://github.com/substack/safe-regex at 1.1.0.
